@@ -1,50 +1,50 @@
 * AWS Lambda
 ** What is
-   Virtual Functions
-   Short Executions
-   On-Demand
-   Scaling is automated
-   Easy Pricing
-   Free tier is 1M requsts, 400k GB of compute time
-   node,python,py3,groovy,java,jmaven,scala,c#
+   * Virtual Functions
+   * Short Executions
+   * On-Demand
+   * Scaling is automated
+   * Easy Pricing
+   * Free tier is 1M requsts, 400k GB of compute time
+   * node,python,py3,groovy,java,jmaven,scala,c#
 ** Integrations
-   api gateway
-   kinesis
-   dynamoDB
-   AWS S3
-   AWS IoT
-   CloudWatch events
-   cw logs
-   SNS
-   Cognito
+   * api gateway
+   * kinesis
+   * dynamoDB
+   * AWS S3
+   * AWS IoT
+   * CloudWatch events
+   * cw logs
+   * SNS
+   * Cognito
 ** Example: Thumbnail Creation
-   S3 bucket, user uplaods image
-   S3 triggers lambda function, creates thumbnail
-   Lambda pushes thumbnail to S3
-   Lambda pushes to metadata in dynamo db
+   * S3 bucket, user uplaods image
+   * S3 triggers lambda function, creates thumbnail
+   * Lambda pushes thumbnail to S3
+   * Lambda pushes to metadata in dynamo db
 ** Serverless Config & Deploy
-   install global serverless
-   register user via aws cli
-   sls create
-   update code and yaml file w/ provider and region
-   sls deploy -v
-   sls invoke -f hello -l
-   to update function: sls deploy function -f hello
-   for removal: sls remove
+   * install global serverless
+   * register user via aws cli
+   * sls create
+   * update code and yaml file w/ provider and region
+   * sls deploy -v
+   * sls invoke -f hello -l
+   * to update function: sls deploy function -f hello
+   * for removal: sls remove
    
 ** Fetching function logs
-   monitoring tab in aws console
-   top right view logs in cloudwatch
-   sls logs -f hello -t(Tail)
+   * monitoring tab in aws console
+   * top right view logs in cloudwatch
+   * sls logs -f hello -t(Tail)
    
 ** Timeouts and Memory
-   yaml add timeout: and memorySize: lines
-   can set default timeout and memory in provider
+   * yaml add timeout: and memorySize: lines
+   * can set default timeout and memory in provider
 
 ** IAM Permissions for Lambda functions
-   yaml iamRoleStatements:
-   effect:
-   action:
+   * yaml iamRoleStatements:
+   * effect:
+   * action:
 ** Environment Variables
    import os
 
@@ -56,4 +56,9 @@
 
 ** VPC
 ** S3 Events
-   1
+** Thumbnail Exercise: Lessons Learned
+   * Handle Errors
+   * Measure Timeouts
+   * Alert Amazon SNS
+   * DB Integration
+   
