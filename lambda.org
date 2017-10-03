@@ -47,9 +47,13 @@
    action:
 ** Environment Variables
    import os
+
    return os.environ['asdasd']
+
    yaml config environment: variable:
+
    functions inherit, can add environment: variable: to function in functions: yaml to overload
+
 ** VPC
 ** S3 Events
    1
