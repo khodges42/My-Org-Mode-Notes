@@ -1,0 +1,47 @@
+* Reversing course
+** Debuggers/Tools
+*** Olly (win)
+*** EDB
+*** Immunity (win)
+*** x64dbg (win32, win64)
+*** gdb
+*** IDA Pro (closed)
+*** Windebug (closed)
+*** PEBrowse
+    browse .exe
+*** NASM
+*** vulnserver
+    test server for vulns
+*** zzuf
+    Fuzzer
+** Vulnerabilities
+*** Stack buffer overflow
+*** Heap buffer overflow
+*** format string
+** Fuzzing
+   set up vuln server
+   nc to vuln server
+   echo 'HELP' `python-c 'print "a" * 5000'` | nc localhost 1234
+   zzuf cat test2.txt
+   -r 0.2 (randomization)
+   -b12 (start at bytes)
+
+   script
+   olly, notices access violation
+
+** Assembly
+   Using immunity to watch buffer overflow
+   overwrites return call
+** Stack Buffer Overflows
+*** Calling Conventions
+    How params are passed to functions
+    Three poss. in win32 (cdecl, stddecl, fastcall)
+    cdecl can be variable
+    stddecl no variable (no printf)
+    fastcall has two temp buffers on stack
+*** Successful buffer overflow exploit
+    Overwrites return address
+    Injects shellcode (shell-storm)
+    return address and what comes after (overflow local vars)
+    
+    
